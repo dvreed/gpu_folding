@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install --no-install-recommends -y \
         curl adduser bzip2 &&\
-        curl --insecure https://download.foldingathome.org/releases/public/release/fahclient/debian-testing-64bit/v${FAH_VERSION_MAJOR}/fahclient_${FAH_VERSION_MINOR}_amd64.deb > /tmp/fah.deb &&\
+        curl --insecure https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v${FAH_VERSION_MAJOR}/fahclient_${FAH_VERSION_MINOR}_amd64.deb > /tmp/fah.deb &&\
         mkdir -p /etc/fahclient/ &&\
         touch /etc/fahclient/config.xml &&\
         dpkg --install /tmp/fah.deb &&\
